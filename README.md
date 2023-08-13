@@ -4,9 +4,9 @@ This Repo includes two tasks
 
 <b> 1. System Design </b>
 
-InnoDB MySQL Cluster
+Message Queues
 
-During the production yesterday, we can see a significant load on the MySQL database. You are assigned to set up an InnoDB MySQL cluster that performs group replication. There should be two secondary nodes and a primary node. For the sake of demonstration, you can use MySQL containers.
+Host a front end that has a button in it. On clicking, it should call a REST endpoint of a backend service. Create another backend service that keeps track of the number of clicks the users make and prints it. Both services should communicate via a message queue of your choice.
 
 <b> 2. DevOps </b>
 
