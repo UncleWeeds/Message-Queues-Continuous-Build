@@ -1,0 +1,30 @@
+version: '3.9'
+services:
+  frontend:
+    image: frontend
+    build:
+      context: ./nginx-frontend
+    ports:
+      - "8080:8080"
+
+  bs1:
+    image: backend_service_1
+    build:
+      context: ./backendService
+    ports:
+      - "5001:5001"
+    depends_on:
+      - rabbitmq
+
+  bs2:
+    image: backend_service_2
+    build:
+      context: ./backendService2
+    depends_on:
+      - rabbitmq
+
+  rabbitmq:
+    image: rabbitmq:latest
+    ports:
+      - "5672:5672"
+    
