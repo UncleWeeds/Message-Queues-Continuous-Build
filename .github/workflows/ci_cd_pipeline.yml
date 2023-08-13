@@ -3,9 +3,7 @@ name: CI/CD Pipeline
 on:
   push:
     branches:
-      - dev
-  schedule:
-    - cron: '0 0 * * *'
+      - master
 
 jobs:
   build-and-push:
@@ -23,21 +21,11 @@ jobs:
 
     - name: Build and push Docker images
       run: |
-        docker build -t uweeds/frontend:latest ./Frontend
-        docker push uweeds/frontend:latest
-
-        docker build -t uweeds/backend:latest ./Backend
+        docker build -t uweeds/backend:latest ./backendService
         docker push uweeds/backend:latest
 
-        docker build -t uweeds/backend2:latest ./Backend
+        docker build -t uweeds/backend2:latest ./backendService2
         docker push uweeds/backend2:latest
 
-        docker build -t uweeds/nginx:latest ./nginx
-        docker push uweeds/nginx:latest
-
-    - name: Merge to master
-      if: github.event_name == 'schedule'
-      run: |
-        git checkout master
-        git merge dev
-        git push origin master
+        docker build -t uweeds/nginx-frontend:latest ./nginx-frontend 
+        docker push uweeds/nginx-frontend:latest
