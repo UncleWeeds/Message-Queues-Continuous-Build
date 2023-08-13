@@ -16,7 +16,7 @@ Configure a continuous build pipeline that listens to the GitHub repo push, buil
 
 <b>If you are interested in checking out the project, you can follow the instructions below:</b>
 
-1.Navigate to the root directory of the repository you've downloaded.
+1.Navigate to the root directory of the repository you've copied.
 
 2.Run the command docker-compose up to start the project.
 
