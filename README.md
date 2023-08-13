@@ -14,7 +14,7 @@ Continuous Build
 
 Configure a continuous build pipeline that listens to the GitHub repo push, builds the image, and pushes it to the Docker hub. We recommend using Jenkins for this purpose but feel free to do your research.
 
-<b>If you are interested in checking out the project, you can follow the instructions below:<b>
+<b>If you are interested in checking out the project, you can follow the instructions below:</b>
 
 1.Navigate to the root directory of the repository you've downloaded.
 
