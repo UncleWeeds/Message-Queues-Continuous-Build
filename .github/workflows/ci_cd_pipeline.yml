@@ -20,11 +20,11 @@ jobs:
 
     - name: Build and push Docker images
       run: |
-        docker build -t uweeds/backend:latest ./backendService
-        docker push uweeds/backend:latest
+        docker build -t uweeds/backend007:latest ./backendService
+        docker push uweeds/backend007:latest
 
-        docker build -t uweeds/backend2:latest ./backendService2
-        docker push uweeds/backend2:latest
+        docker build -t uweeds/backend2007:latest ./backendService2
+        docker push uweeds/backend2007:latest
 
         docker build -t uweeds/nginx-frontend:latest ./nginx-frontend 
         docker push uweeds/nginx-frontend:latest
